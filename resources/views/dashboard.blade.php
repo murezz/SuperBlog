@@ -12,7 +12,7 @@
                 <div class="desc mt-5">
                     <h1 class="text-bold">Write your story on <span class="text-primary">SuperBlog</span> now.</h1>
                     <p class="fs-5 mt-4 mb-5 col-8">
-                        Temukan banyak cerita dan pengalaman dari pengguna SuperBlog.
+                        Temukan banyak cerita dan pengalaman dari banyak orang
                     </p>
                     <a href="" class="btn-custom shadow me-4">Started Now</a>
                     <a href="" class="btn-outline-custom">Explore</a>

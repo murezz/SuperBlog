@@ -4,6 +4,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+section {
+  padding-top: 50px;
+}
+
 .text-bold {
   font-weight: 700;
 }
@@ -33,5 +37,9 @@ body {
   color: #0d6efd;
   text-decoration: none;
   border-radius: 12px;
+}
+
+.dropdown-menu {
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */

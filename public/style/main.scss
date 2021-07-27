@@ -10,6 +10,11 @@ $primary: #0d6efd;
 $secondary: #f7fbff;
 
 
+section{
+    padding-top: 50px;
+}
+
+
 .text-bold{
     font-weight: 700;
 }
@@ -39,4 +44,8 @@ $secondary: #f7fbff;
     color: $primary;
     text-decoration: none;
     border-radius: 12px;
+}
+
+.dropdown-menu{
+    border: none;
 }

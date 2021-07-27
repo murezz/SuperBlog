@@ -2,14 +2,16 @@
 
 @section('content')
 
-<h1>Hallo</h1>
-<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();">
-    {{ __('Logout') }}
-</a>
+@include('layouts.navbar')
 
-<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-    @csrf
-</form>
+
+<section id="home">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-bold">Explore Story People.</h2>
+        </div>
+    </div>
+</section>
+
 
 @endsection
