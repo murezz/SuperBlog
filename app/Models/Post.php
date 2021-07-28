@@ -16,4 +16,9 @@ class Post extends Model
         'body',
         'date',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

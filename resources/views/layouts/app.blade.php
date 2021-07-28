@@ -15,7 +15,7 @@
     {{-- my css --}}
     <link rel="stylesheet" href="style/main.css">
 
-    <title>Hello, world!</title>
+    <title>{{ $title }}</title>
 </head>
 
 <body>

@@ -8,19 +8,21 @@
             <div class="card shadow-sm mt-5">
 
                 <div class="card-header text-center text-uppercase">
-                    <h5 class="mt-2">{{ __('login') }}</h5>
+                    <h5 class="mt-2">{{ __('Create blog') }}</h5>
                 </div>
 
                 <div class="card-body">
-                    <form action="{{ route('login') }}" method="post">
+                    <form action="{{ route('post.store') }}" method="post">
                         @csrf
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
-                            @error('email')
+                        <div class="mb-3">
+                            <label for="title" class="form-label">title blog</label>
+                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
+                                name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+
+                            @error('title')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -28,21 +30,20 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input id="password" type="password"
-                                class="form-control @error('password') is-invalid @enderror" name="password"
-                                value="{{ old('password') }}" required autocomplete="password" autofocus>
+                            <label for="body" class="form-label">body</label>
+                            <textarea id="body" class="form-control @error('body') is-invalid @enderror" name="body"
+                                value="{{ old('body') }}" required autocomplete="body" rows="3" autofocus>
+                            </textarea>
 
-                            @error('password')
+                            @error('body')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
                         </div>
-
 
                         <div class="mb-2">
-                            <button type="submit" class="btn btn-primary">Log in</button>
+                            <button type="submit" class="btn btn-primary">submit</button>
                         </div>
 
                     </form>

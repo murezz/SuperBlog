@@ -76,6 +76,11 @@
                         </div>
 
                     </form>
+
+                    <div class="text-center">
+                        <p>sudah punya akun? <a href="{{ route('login') }}">Login</a></p>
+                    </div>
+
                 </div>
             </div>
         </div>

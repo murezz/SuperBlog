@@ -34,7 +34,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a href="" class="dropdown-item">Create Story</a>
+                        <a href="/create" class="dropdown-item">Create Story</a>
                         <a href="" class="dropdown-item">Settings</a>
                         <div class="container">
                             <hr>
