@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d6efd">
 
     <link rel="shortcut icon" href="{{ ('favicon.ico') }}" type="image/x-icon">
 
@@ -13,9 +14,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     {{-- my css --}}
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="/style/main.css">
 
-    <title>{{ $title }}</title>
+    <title>@yield('title') - SuperBlog</title>
 </head>
 
 <body>

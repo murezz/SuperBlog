@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'SuperBlog')
+
+@show
 
 @section('content')
 

@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active me-3" aria-current="page" href="#">Home</a>
+                <a class="nav-link active me-3" aria-current="page" href="/home">Home</a>
                 <a class="nav-link me-3" href="#">Features</a>
                 <a class="nav-link me-5" href="#">Pricing</a>
 
@@ -28,7 +28,7 @@
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <img src="photo/{{ Auth::user()->photo }}" width="30" height="30" class="rounded-circle me-2"
+                        <img src="/photo/{{ Auth::user()->photo }}" width="30" height="30" class="rounded-circle me-2"
                             alt="">
                         {{ Auth::user()->name }}
                     </a>
@@ -40,7 +40,7 @@
                             <hr>
                         </div>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 

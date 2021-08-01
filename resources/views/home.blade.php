@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $title)
+
 @section('content')
 
 @include('layouts.navbar')
@@ -9,7 +11,7 @@
     <div class="container">
 
         @if ($message = Session::get('success'))
-        <div class="alert alert-primary">
+        <div class="alert bg-custom text-white">
             {{ $message }}
         </div>
         @endif
@@ -20,19 +22,35 @@
 
         <div class="row">
             @foreach ($post as $item)
-            <div class="col-md-4 mb-3">
-                <div class="card">
+            <div class="col-md-4 mb-3 py-3">
+                <div class="card card-hover shadow-sm">
                     <div class="card-body">
-                        <h3>{{ $item->title }}</h3>
+                        <a href="/story/{{ $item->slug }}">
+                            <h5 class="text-bold">{{ $item->title }}</h5>
+                        </a>
+                        {{-- <p>{{ $item->body }}</p> --}}
+
                         <hr>
-                        <p>{{ $item->body }}</p>
-                        <hr>
-                        <h5>Author : {{ $item->user->name }}</h5>
+                        <a href="/author/{{ $item->user->username }}">
+                            <p>By : {{ $item->user->name }}</p>
+                        </a>
+
+                        {{-- <div class="row">
+                                <div class="col-2">
+                                    <img src="photo/{{ $item->user->photo }}" width="50" height="50"
+                        class="rounded-circle" alt="">
                     </div>
-                </div>
+                    <div class="col-10">
+                        <h6 class="text-bold">{{ $item->user->name }}</h6>
+                        <p>{{ $item->user->jobs }}</p>
+                    </div>
+                </div> --}}
             </div>
-            @endforeach
         </div>
+
+    </div>
+    @endforeach
+    </div>
     </div>
 </section>
 

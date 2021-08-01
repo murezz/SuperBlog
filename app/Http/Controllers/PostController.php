@@ -17,15 +17,13 @@ class PostController extends Controller
 
     public function index()
     {
-        return view('home', [
-            'title' => 'Halaman Home',
-            'post' => Post::all()
-        ]);
+
+        return view('posts.post', compact('post'));
     }
 
     public function create()
     {
-        return view('post.create', [
+        return view('posts.create', [
             'title' => 'Create blog'
         ]);
     }

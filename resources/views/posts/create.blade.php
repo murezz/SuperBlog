@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
+@section('title', 'Create Blog')
+
 @section('content')
 
 <section>
     <div class="row justify-content-center">
-        <div class="col-4">
+        <div class="col-8">
             <div class="card shadow-sm mt-5">
 
                 <div class="card-header text-center text-uppercase">
@@ -29,11 +31,11 @@
                             @enderror
                         </div>
 
-                        <div class="mb-3">
-                            <label for="body" class="form-label">body</label>
-                            <textarea id="body" class="form-control @error('body') is-invalid @enderror" name="body"
-                                value="{{ old('body') }}" required autocomplete="body" rows="3" autofocus>
-                            </textarea>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control  @error('body') is-invalid @enderror" name="body"
+                                placeholder="Leave a comment here" id="body" style="height: 500px"
+                                value="{{ old('body') }}" required autocomplete="body" autofocus></textarea>
+                            <label for="body">Comments</label>
 
                             @error('body')
                             <span class="invalid-feedback" role="alert">
@@ -48,9 +50,6 @@
 
                     </form>
 
-                    <div class="text-center">
-                        <p>Belum punya akun? <a href="{{ route('register') }}">Register</a></p>
-                    </div>
 
                 </div>
             </div>

@@ -8,6 +8,20 @@ section {
   padding-top: 50px;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+textarea {
+  height: 500px;
+  resize: none;
+}
+
+.bg-custom {
+  background-color: #0d6efd;
+}
+
 .text-bold {
   font-weight: 700;
 }
@@ -15,6 +29,11 @@ section {
 .card {
   border: none;
   border-radius: 12px;
+}
+
+.card-hover:hover {
+  margin-top: -5px;
+  transition: 0.1s;
 }
 
 .card-header {

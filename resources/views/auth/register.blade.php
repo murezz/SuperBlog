@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Register')
+
 @section('content')
 
 <section class="py-5">
@@ -22,6 +24,19 @@
                                 name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                             @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input id="username" type="text"
+                                class="form-control @error('username') is-invalid @enderror" name="username"
+                                value="{{ old('username') }}" required autocomplete="username" autofocus>
+
+                            @error('username')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
